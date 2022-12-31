@@ -91,7 +91,7 @@ const handleSubmit = async (e) => {
 
     if (response.ok) {
         const data = await response.json()
-        const parsedData = data.bot.trim()
+        const parsedData = data.bot.trim() // trims any traling spases/'\n'
 
         typeText(messageDiv, parsedData)
     } else {
